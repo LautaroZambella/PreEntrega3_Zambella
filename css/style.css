@@ -1,0 +1,450 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  background-color: #cc5803;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+body {
+  margin-top: 0;
+  padding-top: 0;
+  overflow: auto;
+}
+header ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+header a {
+  color: black;
+  border-radius: 10px;
+}
+
+main {
+  background-color: #ffc15e;
+  padding-left: 20px;
+}
+main p {
+  font-size: 22px;
+  font-family: "Montserrat", sans-serif;
+}
+main img {
+  border-radius: 8px;
+}
+
+#libros div {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 25px 0px;
+}
+
+#libros div p {
+  width: 800px;
+}
+
+footer {
+  background-color: #1f1300;
+}
+footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  font-size: 50px;
+  margin: 0;
+  padding: 0;
+}
+h2 {
+  font-size: 30px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.imageLink {
+  transition: transform 0.5s;
+}
+
+.imageLink:hover {
+  transform: scale(1.05);
+}
+
+.libroGenero {
+  color: #0c1821;
+  display: flex;
+  gap: 10px;
+}
+.generoRating {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+.primeraImg {
+  padding-top: 10px;
+}
+
+.indexLibro {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.parrafoLibro {
+  width: 800px;
+  justify-self: center;
+}
+
+.infoLibro {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding-bottom: 30px;
+}
+
+.infoLibro p {
+  width: 35%;
+}
+
+.imagenesLibro {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* lsaasksajjsasaj */
+.brandon,
+.agatha,
+.robert,
+.juan {
+  display: grid;
+  grid-template-columns: 1.5fr 0.8fr 0.8fr 0.8fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "img txt txt txt"
+    "img quote quote quote"
+    "img libros sagas wiki";
+  gap: 10px;
+  padding: 20px;
+}
+
+.brandon img {
+  grid-area: img;
+}
+.brandon .info {
+  grid-area: txt;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.brandon .libros {
+  grid-area: libros;
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.brandon .sagas {
+  grid-area: sagas;
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+}
+.brandon .wiki {
+  grid-area: wiki;
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.quote {
+  grid-area: quote;
+  font-style: italic;
+  color: #2f4f4f;
+}
+
+.agatha img {
+  grid-area: img;
+}
+
+.agatha .info {
+  grid-area: txt;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.agatha .libros {
+  grid-area: libros;
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.agatha .sagas {
+  grid-area: sagas;
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.agatha .wiki {
+  grid-area: wiki;
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.robert img {
+  grid-area: img;
+}
+
+.robert .info {
+  grid-area: txt;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.robert .libros {
+  grid-area: libros;
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.robert .sagas {
+  grid-area: sagas;
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.robert .wiki {
+  grid-area: wiki;
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.juan img {
+  grid-area: img;
+}
+
+.juan .info {
+  grid-area: txt;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.juan .libros {
+  grid-area: libros;
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.juan .sagas {
+  grid-area: sagas;
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.juan .wiki {
+  grid-area: wiki;
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+}
+/* lalaslsalaslaslaslas */
+
+#sagas {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: 2fr 2fr;
+  grid-template-areas:
+    "cosmere disco"
+    "holmes potter";
+  gap: 20px;
+}
+
+.cosmere {
+  grid-area: cosmere;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.disco {
+  grid-area: disco;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.holmes {
+  grid-area: holmes;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.potter {
+  grid-area: potter;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.noBackground {
+  background-color: #cc5803;
+}
+
+.slider {
+  max-width: 415px;
+}
+
+.toCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.toCenter h2 {
+  align-self: flex-start;
+}
+
+.colorear {
+  color: #7bb10f;
+}
+
+.miBoton {
+  background-color: #1f1300;
+  color: rgb(250, 235, 215);
+  border: none;
+  font-family: "Lato", sans-serif;
+}
+
+.miBoton:hover {
+  background-color: rgb(173, 159, 137);
+}
+
+h5 {
+  font-family: "Poppins", sans-serif;
+}
+
+#contenedor, #limpiar{
+  background-color: #ffc15e;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+#contenedor button{
+  padding: 15px;
+}
+#limpiar button {
+  padding: 15px;
+}
+
+#SAGASID {
+  background-color: #ffc15e;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+#SAGASID input {
+  padding: 10px;
+}
+
+.insider ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+
+@media (min-width: 992px) {
+  .nav_media {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  header {
+    display: flex;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  h1 {
+    justify-self: center;
+    align-self: center;
+  }
+}
+
+@media (max-width: 420px) {
+  .slider {
+    max-width: 300px;
+  }
+
+  .imageLink {
+    width: 300px;
+  }
+  #sagas img {
+    width: 300px;
+  }
+}
+
+@media (max-width: 1290px) {
+  #sagas {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 650px) and (min-width: 421px) {
+  #sagas img {
+    width: 400px;
+  }
+}

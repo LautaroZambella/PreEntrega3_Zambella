@@ -33,7 +33,6 @@ SAGASDIV.style.display = "none"
 
 const isLog = JSON.parse(localStorage.getItem("isLog"))
 const titulosGuardados = JSON.parse(localStorage.getItem("titulosGuardados"))
-console.log(titulosGuardados)
 if (isLog !== null && isLog.usuario) {
     contencion.innerHTML = `<h2>Welcome again ${isLog.usuario}!</h2> `
     SAGASDIV.style.display = "flex"
@@ -82,7 +81,6 @@ botonIniciar.addEventListener("click", ()=> {
 
 agregarTitulos.addEventListener("change", (event) => {
     titulos.push(event.target.value)
-    console.log(titulos)
     event.target.value = ""
 })
 
@@ -92,7 +90,6 @@ añadir.addEventListener("click", ()=> {
         let porAñadir = document.createElement("li")
         porAñadir.textContent = `${titulo}`
         listaTitulo.appendChild(porAñadir);
-        console.log(listaTitulo)
         
     })
     localStorage.setItem("titulosGuardados", JSON.stringify(titulos));

@@ -40,7 +40,7 @@ let endpoint2 = "/character?name=morty&status=alive&location=earth"
 
 
 let kilowat = ""
-let year = null
+let year = 0
 let author = ""
 
 class trelew {
@@ -131,9 +131,8 @@ agregarTitulos.addEventListener("change", (event) => {
 })
 
 año.addEventListener("change", (event) => {
-   if (event.target.value != null){
-    year = parseInt(event.target.value)
-    }
+    year = event.target.value
+    
 })
 
 autor.addEventListener("change", (event) => {
@@ -159,31 +158,18 @@ añadir.addEventListener("click", ()=> {
     else{
      Toastify({
 
-         text: "Titulo agregado!",
-         duration: 1500,
+         text: "Datos cargados!",
+         duration: 1750,
          close: true
         }).showToast();
 
-     Toastify({
-
-         text: "Año agregado!",
-         duration: 1500,
-         close: true
-         }).showToast();
-
-     Toastify({
-
-         text: "Autor agregado!",
-         duration: 1500,
-         close: true
-        }).showToast();
         caja.style.display = "flex"
-    titulos.push(new trelew(kilowat, year, author))
-    listaTitulo.innerHTML = ""
-    titulos.forEach((entrada) => {
+        titulos.push(new trelew(kilowat, year, author))
+        listaTitulo.innerHTML = ""
+        titulos.forEach((entrada) => {
         let porAñadir = document.createElement("p")
         porAñadir.innerText = `El libro:${entrada.nombre} del autor: ${entrada.autor} publicado en el año: ${entrada.año} `
-    listaTitulo.appendChild(porAñadir)
+        listaTitulo.appendChild(porAñadir)
     })
     localStorage.setItem("listaGuardar", JSON.stringify(titulos))
     }
@@ -223,6 +209,8 @@ odiar.addEventListener("click", () => {
             img.src = roco.image
             img.width = 200
             p.innerHTML = roco.name
+            div.style.border = "2px solid black"
+            div.style.padding = "10px"
             div.appendChild(p)
             div.appendChild(img)
             atroden.style.flexDirection = "row"
@@ -231,7 +219,8 @@ odiar.addEventListener("click", () => {
         })
     })
     .catch((error)=> {
-        console.log("hubo un error" + " " + error)
+        atroden.innerHTML = ""
+        atroden.innerHTML = `<h2>Sucedio un error al cargar las listas</h2>`
     })
 })
 
@@ -250,6 +239,8 @@ gustar.addEventListener("click", ()=> {
             imga.src = mauricio.image
             imga.width = 200
             pa.innerHTML = mauricio.name
+            diva.style.border = "2px solid black"
+            diva.style.padding = "10px"
             diva.appendChild(pa)
             diva.appendChild(imga)
             atroden.style.flexDirection = "row"
@@ -258,6 +249,7 @@ gustar.addEventListener("click", ()=> {
         })
     })
     .catch((error) => {
-        console.log("hubo un error" + " " + error)
+        atroden.innerHTML = ""
+        atroden.innerHTML = `<h2>Sucedio un error al cargar las listas</h2>`
     })
 })

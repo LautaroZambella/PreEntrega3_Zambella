@@ -410,11 +410,13 @@ h5 {
 
 .caja button {
   padding: 5px;
+  height: 150px;
 }
 
 .atroden {
   display: flex;
   flex-direction: row;
+  gap: 15px;
 }
 
 @media (min-width: 992px) {

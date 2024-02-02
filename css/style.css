@@ -1,3 +1,5 @@
+
+
 * {
   padding: 0;
   margin: 0;
@@ -401,6 +403,19 @@ h5 {
   padding: 20px;
 }
 
+.caja {
+  padding: 20px;
+  gap: 15px;
+}
+
+.caja button {
+  padding: 5px;
+}
+
+.atroden {
+  display: flex;
+  flex-direction: row;
+}
 
 @media (min-width: 992px) {
   .nav_media {
